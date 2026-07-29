@@ -1,0 +1,2197 @@
+/* ========================================= */
+/* RESET */
+/* ========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* ========================================= */
+/* FUNDAL */
+/* ========================================= */
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#1b1b1b;
+
+}
+
+/* ========================================= */
+/* TELEFON */
+/* ========================================= */
+
+#phone{
+
+    position:relative;
+
+    width:390px;
+    height:844px;
+
+    overflow:hidden;
+
+    border-radius:60px;
+
+    background:black;
+
+    border:12px solid #111;
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.45);
+
+}
+
+/* ========================================= */
+/* WALLPAPER */
+/* ========================================= */
+
+#background{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:url("images/wallpaper.jpeg");
+    background-size:cover;
+    background-position:center;
+
+    z-index:-2;
+
+}
+
+/* ========================================= */
+/* OVERLAY */
+/* ========================================= */
+
+#background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.18),
+        rgba(0,0,0,.30)
+
+    );
+
+}
+
+/* ========================================= */
+/* NOTCH */
+/* ========================================= */
+
+#notch{
+
+    position:absolute;
+
+    top:12px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:150px;
+    height:34px;
+
+    background:black;
+
+    border-radius:25px;
+
+    z-index:1000;
+
+}
+
+/* ========================================= */
+/* LOCK SCREEN */
+/* ========================================= */
+
+#lockScreen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:18px;
+
+    color:white;
+
+    transition:.45s;
+
+}
+
+/* ========================================= */
+/* STATUS BAR */
+/* ========================================= */
+
+#statusBar{
+
+    margin-top:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+#statusIcons{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+/* ========================================= */
+/* LOCK CONTENT */
+/* ========================================= */
+
+#lockContent{
+
+    text-align:center;
+
+    margin-top:90px;
+
+}
+
+#lockDate{
+
+    font-size:24px;
+
+    font-weight:400;
+
+    margin-bottom:8px;
+
+}
+
+#lockClock{
+
+    font-size:88px;
+
+    font-weight:300;
+
+    line-height:1;
+
+}
+
+#lockContent h2{
+
+    margin-top:30px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    text-shadow:
+    0 2px 8px rgba(0,0,0,.35);
+
+}
+
+/* ========================================= */
+/* SWIPE */
+/* ========================================= */
+
+#swipeText{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-size:16px;
+
+    opacity:.95;
+
+    animation:swipe 1.4s infinite;
+
+}
+
+@keyframes swipe{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================================= */
+/* HOME */
+/* ========================================= */
+
+#homeScreen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    color:white;
+
+    padding:18px;
+
+}
+
+/* ascuns */
+
+.hidden{
+
+    display:none !important;
+
+}
+/* ========================================= */
+/* HOME TOP */
+/* ========================================= */
+
+#homeTop{
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:18px;
+    font-weight:600;
+
+}
+
+/* ========================================= */
+/* APLICAȚII */
+/* ========================================= */
+
+#apps{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px 12px;
+
+    padding:18px 8px;
+
+    align-content:start;
+
+}
+
+.app{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.18s;
+
+}
+
+.app:active{
+
+    transform:scale(.92);
+
+}
+
+.app span{
+
+    margin-top:7px;
+
+    font-size:12px;
+
+    color:white;
+
+    text-shadow:0 2px 4px rgba(0,0,0,.35);
+
+}
+
+/* ========================================= */
+/* ICONIȚE */
+/* ========================================= */
+
+.appIcon{
+
+    width:68px;
+    height:68px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.20);
+
+}
+
+/* culori */
+
+.green{
+    background:#34c759;
+}
+
+.blue{
+    background:#0a84ff;
+}
+
+.red{
+    background:#ff3b30;
+}
+
+.yellow{
+    background:#ffd60a;
+    color:black;
+}
+
+.orange{
+    background:#ff9f0a;
+}
+
+.gray{
+    background:#8e8e93;
+}
+
+.black{
+    background:#1c1c1e;
+}
+
+.white{
+
+    background:white;
+    color:black;
+
+}
+
+.pink{
+
+    background:#ff2d55;
+
+}
+
+.gift{
+
+    background:linear-gradient(
+        135deg,
+        #ff5ca8,
+        #ff2d55
+    );
+
+}
+
+/* ========================================= */
+/* DOCK */
+/* ========================================= */
+
+#dock{
+
+    width:100%;
+
+    height:95px;
+
+    margin-bottom:12px;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(22px);
+
+    display:flex;
+
+    justify-content:space-evenly;
+    align-items:center;
+
+}
+
+.dockIcon{
+
+    width:62px;
+    height:62px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.22);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+
+}
+
+/* ========================================= */
+/* PAGINI APLICAȚII */
+/* ========================================= */
+
+.appPage{
+
+    position:absolute;
+
+    inset:0;
+
+    background:white;
+
+    color:black;
+
+    z-index:200;
+
+    animation:openApp .25s;
+
+}
+
+@keyframes openApp{
+
+    from{
+
+        transform:scale(1.15);
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+}
+
+/* ========================================= */
+/* BARA SUS APP */
+/* ========================================= */
+
+.topBar{
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px;
+
+    border-bottom:1px solid #eee;
+
+    font-size:18px;
+    font-weight:600;
+
+}
+
+{
+
+    width:42px;
+    height:42px;
+.backButton
+    border:none;
+
+    border-radius:50%;
+
+    background:#f2f2f7;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+}
+
+/* ========================================= */
+/* GALERIE */
+/* ========================================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:4px;
+
+    padding:4px;
+
+}
+
+.gallery img{
+
+    width:100%;
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+}
+
+/* ========================================= */
+/* POZĂ DESCHISĂ */
+/* ========================================= */
+
+#photoViewer{
+
+    position:absolute;
+
+    inset:0;
+
+    background:black;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:500;
+
+}
+
+#photoViewer img{
+
+    max-width:100%;
+    max-height:100%;
+
+}
+
+#photoViewer.hidden{
+
+    display:none;
+
+}
+/* ========================================= */
+/* APLICAȚII iPHONE */
+/* ========================================= */
+
+.appPage{
+
+    position:absolute;
+    inset:0;
+
+    background:#ffffff;
+
+    z-index:300;
+
+    display:flex;
+    flex-direction:column;
+
+    animation:openApp .25s ease;
+
+}
+
+@keyframes openApp{
+
+    from{
+
+        opacity:0;
+        transform:scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+.topBar{
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+    font-weight:600;
+
+    border-bottom:1px solid #ececec;
+
+    background:white;
+
+}
+
+.backButton{
+
+    position:absolute;
+
+    left:15px;
+
+    width:auto;
+
+    padding:0;
+
+    background:none;
+
+    border:none;
+
+    color:#007aff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+/* ========================================= */
+/* GALERIE */
+/* ========================================= */
+
+.galleryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:3px;
+
+    padding:3px;
+
+    overflow:auto;
+
+}
+
+.galleryGrid img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    transition:.15s;
+
+}
+
+.galleryGrid img:hover{
+
+    transform:scale(.97);
+
+}
+
+
+/* ========================================= */
+/* FOTO FULLSCREEN */
+/* ========================================= */
+
+#photoViewer{
+
+    position:fixed;
+
+    inset:0;
+
+    background:black;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+#photoViewer.hidden{
+
+    display:none;
+
+}
+
+#photoViewer img{
+
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+}
+
+#photoViewer button{
+
+    position:absolute;
+
+    background:rgba(255,255,255,.15);
+
+    border:none;
+
+    color:white;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+}
+
+#closeViewer{
+
+    top:20px;
+
+    right:20px;
+
+}
+
+#prevViewer{
+
+    left:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+#nextViewer{
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+
+/* ========================================= */
+/* SCROLL */
+/* ========================================= */
+
+.galleryGrid::-webkit-scrollbar{
+
+    width:0;
+
+}
+
+
+/* ========================================= */
+/* ANIMAȚII */
+/* ========================================= */
+
+.galleryGrid img{
+
+    animation:fadeIn .35s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+/* ========================================= */
+/* APP CONTENT */
+/* ========================================= */
+
+.appContent{
+
+    flex:1;
+
+    overflow:auto;
+
+    padding:20px;
+
+    background:#fff;
+
+}
+
+
+/* ========================================= */
+/* HOME INDICATOR */
+/* ========================================= */
+
+.homeIndicator{
+
+    width:140px;
+
+    height:5px;
+
+    background:#000;
+
+    border-radius:50px;
+
+    margin:12px auto;
+
+    opacity:.85;
+
+}
+
+
+/* ========================================= */
+/* APPLE MUSIC */
+/* ========================================= */
+
+.musicPlayer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:100%;
+
+    padding:35px;
+
+}
+
+.album{
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:24px;
+
+    object-fit:cover;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.18);
+
+    margin-bottom:35px;
+
+}
+
+.songTitle{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+    text-align:center;
+
+}
+
+.songArtist{
+
+    color:#888;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+.musicPlayer audio{
+
+    width:100%;
+
+}
+
+
+/* ========================================= */
+/* VIDEO */
+/* ========================================= */
+
+.videoPlayer{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100%;
+
+    background:black;
+
+}
+
+.videoPlayer video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+/* ========================================= */
+/* NOTES */
+/* ========================================= */
+
+.note{
+
+    padding:28px;
+
+    line-height:34px;
+
+    font-size:18px;
+
+    color:#333;
+
+    white-space:pre-line;
+
+}
+
+
+/* ========================================= */
+/* CADOU */
+/* ========================================= */
+
+.giftPage{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    height:100%;
+
+    padding:35px;
+
+}
+
+.giftPage h1{
+
+    color:#ff2d55;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.giftPage p{
+
+    font-size:18px;
+
+    line-height:34px;
+
+    color:#555;
+
+}
+
+.giftHeart{
+
+    font-size:80px;
+
+    animation:heartBeat 1.2s infinite;
+
+    margin-bottom:25px;
+
+}
+
+@keyframes heartBeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* ========================================= */
+/* DESCHIDERE APP */
+/* ========================================= */
+
+.show{
+
+    display:flex !important;
+
+}
+
+.hide{
+
+    display:none !important;
+
+}
+
+
+/* ========================================= */
+/* IOS BLUR */
+/* ========================================= */
+
+.blur{
+
+    backdrop-filter:blur(30px);
+
+    -webkit-backdrop-filter:blur(30px);
+
+}
+
+
+/* ========================================= */
+/* BUTOANE */
+/* ========================================= */
+
+button{
+
+    transition:.2s;
+
+}
+
+button:active{
+
+    transform:scale(.92);
+
+}
+
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+img{
+
+    max-width:100%;
+
+}
+
+video{
+
+    max-width:100%;
+
+}
+
+audio{
+
+    width:100%;
+
+}
+/* ================= REGLAJE FINALE IPHONE ================= */
+
+
+#wallpaper{
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("images/wallpaper.jpeg") center/cover no-repeat;
+
+    z-index:0;
+
+}
+
+
+#homeScreen{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:5;
+
+}
+
+
+
+/* ICONIȚE CENTRATE */
+
+#apps{
+
+    position:absolute;
+
+    top:120px;
+
+    left:0;
+
+    width:100%;
+
+    padding:0 25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:32px 18px;
+
+}
+
+
+.app{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.appIcon{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.25);
+
+}
+
+
+
+.app span{
+
+    margin-top:6px;
+
+    color:white;
+
+    font-size:11px;
+
+}
+
+
+
+/* DOCK CA IPHONE */
+
+#dock{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:15px;
+
+    right:15px;
+
+    height:80px;
+
+    border-radius:28px;
+
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+
+.dockIcon{
+
+    font-size:32px;
+
+    background:none;
+
+}
+/* CEAS LOCK SCREEN */
+
+#lockCenter{
+
+    position:absolute;
+    top:170px;
+    left:0;
+    width:100%;
+
+    text-align:center;
+    color:white;
+
+    text-shadow:0 3px 10px black;
+
+}
+
+
+#lockDate{
+
+    font-size:22px;
+    margin-bottom:10px;
+
+}
+
+
+#lockClock{
+
+    font-size:80px;
+    font-weight:300;
+
+}
+
+
+#lockCenter h2{
+
+    margin-top:25px;
+    font-size:18px;
+
+}
+
+
+/* HOME */
+
+#apps{
+
+    position:absolute;
+
+    top:120px;
+    left:0;
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:35px 15px;
+
+    padding:20px;
+
+}
+
+
+.app{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+.appIcon{
+
+    width:65px;
+    height:65px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:35px;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+/* DOCK */
+
+#dock{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:15px;
+    right:15px;
+
+    height:85px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:30px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+}
+/* ============================= */
+/* APLICAȚII CA PE IPHONE */
+/* ============================= */
+
+
+/* ========================= */
+/* APLICAȚII ÎN TELEFON */
+/* ========================= */
+
+
+.page{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:390px;
+    height:844px;
+
+    border-radius:55px;
+
+    overflow:hidden;
+
+    background:white;
+
+    z-index:100;
+
+}
+
+
+
+/* bara de sus */
+
+.appHeader{
+
+    height:90px;
+
+    padding-top:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    background:white;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+.backButton{
+
+    position:absolute;
+
+    left:15px;
+
+    top:45px;
+
+    border:0;
+
+    background:none;
+
+    font-size:30px;
+
+    color:#007aff;
+
+}
+
+
+
+/* ========================= */
+/* GALERIE CA IPHONE */
+/* ========================= */
+
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:2px;
+
+    padding:2px;
+
+    height:calc(100% - 140px);
+
+    overflow:auto;
+
+}
+
+
+
+.gallery img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+}
+
+
+
+
+/* bara jos iphone */
+
+.page:after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:130px;
+
+    height:5px;
+
+    background:black;
+
+    border-radius:10px;
+
+}
+
+
+@keyframes openPhoneApp{
+
+    from{
+
+        transform:scale(1.15);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* BARA SUS APLICAȚII */
+
+
+.appHeader{
+
+    height:70px;
+
+    padding-top:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-bottom:1px solid #ddd;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+
+
+.backButton{
+
+    position:absolute;
+
+    left:20px;
+
+    top:38px;
+
+    border:none;
+
+    background:none;
+
+    font-size:30px;
+
+    color:#007aff;
+
+}
+
+
+
+/* BARA JOS IPHONE */
+
+
+.page::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:130px;
+
+    height:5px;
+
+    background:black;
+
+    border-radius:20px;
+
+}
+
+
+
+/* ============================= */
+/* GALERIE IPHONE */
+/* ============================= */
+
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:3px;
+
+    padding:3px;
+
+    height:calc(100% - 90px);
+
+    overflow:auto;
+
+}
+
+
+.gallery img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+}
+
+
+
+/* ============================= */
+/* MUZICA */
+/* ============================= */
+
+
+.musicBox{
+
+    height:calc(100% - 90px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+.musicCover{
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:25px;
+
+    background:#ff2d55;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:100px;
+
+}
+
+
+
+/* ============================= */
+/* VIDEO */
+/* ============================= */
+
+
+.myVideo{
+
+    width:100%;
+
+    height:calc(100% - 140px);
+
+    object-fit:contain;
+
+    background:black;
+
+}
+
+
+
+/* ============================= */
+/* NOTITE */
+/* ============================= */
+
+
+.note{
+
+    padding:30px;
+
+    font-size:18px;
+
+    line-height:30px;
+
+    white-space:pre-line;
+
+    height:calc(100% - 90px);
+
+    overflow:auto;
+
+}
+
+
+
+/* ============================= */
+/* CADOU */
+/* ============================= */
+
+
+.giftContent{
+
+    height:calc(100% - 90px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    font-size:25px;
+
+}
+.photoOpen{
+
+    position:absolute;
+
+    inset:0;
+
+    background:black;
+
+    z-index:999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.photoOpen img{
+
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+}
+/* ========================= */
+/* FIX TELEFON COMPLET */
+/* ========================= */
+
+
+html,body{
+
+    width:100%;
+    height:100%;
+    overflow:hidden;
+
+}
+
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+
+}
+
+
+/* telefonul rămâne dimensiunea lui */
+
+#phone{
+
+    width:390px;
+    height:844px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:55px;
+
+}
+
+
+
+/* toate aplicațiile rămân în telefon */
+
+.page{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    border-radius:55px;
+
+    overflow:hidden;
+
+    background:white;
+
+    z-index:50;
+
+}
+
+
+
+/* ascuns */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+/* bara de jos ca iphone */
+
+.page::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:130px;
+
+    height:5px;
+
+    border-radius:20px;
+
+    background:black;
+
+}
+
+
+
+/* aplicatia poze */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:0;
+
+    padding:0;
+
+    width:100%;
+
+}
+
+
+.gallery img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+
+.gallery img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+}
+
+
+/* video */
+
+.myVideo{
+
+    width:100%;
+
+    height:calc(100% - 100px);
+
+    object-fit:contain;
+
+    background:black;
+
+}
+
+
+/* muzica */
+
+.musicBox{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+/* notite */
+
+.note{
+
+    padding:25px;
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+
+
+
+/* bara de sus */
+
+.appHeader{
+
+    height:80px;
+
+    padding-top:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    background:white;
+
+}
+
+
+
+/* buton inapoi */
+
+.backButton{
+
+    position:absolute;
+
+    left:15px;
+
+    top:35px;
+
+    border:none;
+
+    background:none;
+
+    font-size:30px;
+
+    color:#007aff;
+
+}
+/* ========================= */
+/* GEST IPHONE */
+/* ========================= */
+
+#homeIndicator{
+
+    position:absolute;
+
+    bottom:12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:130px;
+
+    height:5px;
+
+    background:black;
+
+    border-radius:20px;
+
+    z-index:999;
+
+}
+/* toate aplicațiile ocupă tot telefonul */
+
+#phone{
+    width:390px;
+    height:844px;
+    overflow:hidden;
+}
+
+
+.page img,
+.page video,
+.page iframe{
+
+    max-width:100%;
+    max-height:100%;
+
+}
+
+
+/* continut aplicatii */
+
+.appContent{
+
+    width:100%;
+    height:100%;
+
+}
+/* FIX GALERIE FĂRĂ SPAȚII */
+
+.gallery{
+
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+
+    gap:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+
+    width:100%;
+}
+
+
+.gallery img{
+
+    width:100%;
+    height:130px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    border:none;
+
+}/* REPARARE GALERIE POZE */
+
+#photosPage .gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3, 1fr);
+
+    gap:0 !important;
+
+    padding:0 !important;
+
+    margin:0 !important;
+
+    align-content:start;
+
+    width:100%;
+
+}
+
+
+#photosPage .gallery img{
+
+    width:100%;
+
+    height:130px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:0;
+
+    padding:0;
+
+}/* NOTIȚE - TEXT MAI COMPACT */
+
+#letterPage .note{
+
+    padding:20px;
+
+    font-size:16px;
+
+    line-height:22px;
+
+    white-space:pre-line;
+
+    height:calc(100% - 90px);
+
+    overflow:auto;
+
+}
